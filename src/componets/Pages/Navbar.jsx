@@ -1,22 +1,25 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState  } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+ 
+
+  
 
   return (
-    <nav className="bg-blue-600 text-white p-4 shadow-md">
+    <nav className="bg-blue-400 text-white p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold">Brand</Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <Link to="/home" className="hover:text-gray-200">Home</Link>
-          <Link to="/service" className="hover:text-gray-200">Service</Link>
-          <Link to="/about" className="hover:text-gray-200">About</Link>
-          <Link to="/contact" className="hover:text-gray-200">Contact</Link>
+          <NavLink to="/" className="hover:text-gray-200">Home</NavLink>
+          <NavLink to="/service" className="hover:text-gray-200">Service</NavLink>
+          <NavLink to="/about" className="hover:text-gray-200">About</NavLink>
+          <NavLink to="/contact" className="hover:text-gray-200">Contact</NavLink>
         </div>
 
         {/* Mobile Menu Button */}
