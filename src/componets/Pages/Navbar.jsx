@@ -9,10 +9,10 @@ const Navbar = () => {
   
 
   return (
-    <nav className="bg-blue-400 text-white p-4 shadow-md">
+    <nav className="bg-emerald-500 text-white p-4 shadow-md fixed top-0 left-0 w-full z-50" >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold">Brand</Link>
+        <Link to="/" className="text-2xl font-bold">Tomato</Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
