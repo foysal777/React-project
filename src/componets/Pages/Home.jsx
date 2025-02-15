@@ -1,5 +1,6 @@
 import React from 'react'
 import Carousel from '../Slider/Slider'
+import ProductCards from '../Others/Product_card'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         {/* card section  */}
           <section>
             <p  className='text-center text-5xl pt-10'>Types of vegetable</p>
+             <ProductCards></ProductCards>
           </section>
 
 
