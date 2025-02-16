@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from '../Slider/Slider'
 import ProductCards from '../Others/Product_card'
+import FilterVegetable from '../Others/FilterVegetable'
 
 const Home = () => {
   return (
@@ -18,7 +19,9 @@ const Home = () => {
              <ProductCards></ProductCards>
           </section>
 
-
+           <div>
+            <FilterVegetable></FilterVegetable>
+           </div>
 
       </section>
 
