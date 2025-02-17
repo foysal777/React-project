@@ -11,43 +11,44 @@ const products = [
     { id: 6, name: "Banana", category: "Fruits", price: 30, oldPrice: 45, image: "https://via.placeholder.com/150" },
 ];
 
-const categories = ["All" , "Fruit" , "Vegetable"];
-const [selectCategories , setCategoreis ] = useState("All");
+const categories = ["All", "Fruit", "Vegetable"];
+const [selectCategories, setCategoreis] = useState("All");
 const FilterVegetable = () => {
     return (
         <div>
             {/* filter button  */}
 
-         
-                <h1 className="text-2xl font-bold">Our Organic Products</h1>
-                <div className="flex gap-4 my-4">
-                  {
+
+            <h1 className="text-2xl font-bold">Our Organic Products</h1>
+            <div className="flex gap-4 my-4">
+                {
                     categories.map(c => (
 
-                        <div> 
-
-                         <button className={}> </button>
+                        <div>
+                            key={c}
+                            onClick={() => setCategoreis(c)}
+                            <button className={`${selectCategories === c ? "bg-amber-300 " : "bg-green-400"}`}>{c} </button>
                         </div>
-                    ) )
-                  }
-                </div>
-                {/* show all fruits  */}
-                <div className="grid grid-cols-4 gap-4">
-                    {
-                        products.map(product => (
-                            <div key={product.id} className="border p-4 rounded-lg shadow-md">
-                                <img src={product.image} alt={product.name} className="w-full h-32 object-cover" />
-                                <h2 className="font-semibold mt-2">{product.name}</h2>
-                                <p className="text-green-600 font-bold">${product.price.toFixed(2)}</p>
-                                <p className="line-through text-gray-500">${product.oldPrice.toFixed(2)}</p>
-
-                            </div>
-                        ))
-                    }
-                </div>
-
+                    ))
+                }
             </div>
-            )
+            {/* show all fruits  */}
+            <div className="grid grid-cols-4 gap-4">
+                {
+                    products.map(product => (
+                        <div key={product.id} className="border p-4 rounded-lg shadow-md">
+                            <img src={product.image} alt={product.name} className="w-full h-32 object-cover" />
+                            <h2 className="font-semibold mt-2">{product.name}</h2>
+                            <p className="text-green-600 font-bold">${product.price.toFixed(2)}</p>
+                            <p className="line-through text-gray-500">${product.oldPrice.toFixed(2)}</p>
+
+                        </div>
+                    ))
+                }
+            </div>
+
+        </div>
+    )
 }
 
-            export default FilterVegetable
+export default FilterVegetable
